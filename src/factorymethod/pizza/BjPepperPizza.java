@@ -1,4 +1,4 @@
-package factory.factorymethod.pizza;
+package factorymethod.pizza;
 
 public class BjPepperPizza extends Pizza {
     @Override

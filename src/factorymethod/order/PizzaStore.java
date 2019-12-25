@@ -1,4 +1,4 @@
-package factory.factorymethod.order;
+package factorymethod.order;
 
 public class PizzaStore {
 

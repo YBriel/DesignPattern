@@ -8,8 +8,11 @@ package facade;
 public class Client {
 
     public static void main(String[] args) {
-        Facad facad=new Facad(new Light(),new Tv());
+/*        Facad facad=new Facad(new Light(),new Tv());
         facad.open();
-        facad.close();
+        facad.close();*/
+        char ch1 = 'B'; char ch2 = 12;
+        System.out.println("65和'A'是否相等？" + (66 == ch1));//true
+        System.out.println("12和ch2是否相等？" + (12 == ch2));//true
     }
 }

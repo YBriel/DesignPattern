@@ -1,7 +1,7 @@
-package factory.factorymethod.order;
+package factorymethod.order;
 
 
-import factory.factorymethod.pizza.Pizza;
+import factorymethod.pizza.Pizza;
 
 import java.io.BufferedReader;
 import java.io.IOException;
