@@ -13,17 +13,13 @@ public class LightOffCommand implements Command {
         this.lightReceiver=lightReceiver;
     }
 
-    public void setLightReceiver(LightReceiver lightReceiver) {
-        this.lightReceiver = lightReceiver;
-    }
-
     @Override
     public void execute() {
-
+        lightReceiver.on();
     }
 
     @Override
     public void undo() {
-
+        lightReceiver.off();
     }
 }

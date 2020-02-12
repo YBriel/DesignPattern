@@ -1,9 +1,9 @@
 package responsibilitychain;
 
 /**
- * @Author： yuzq
- * @Description:
- * @Date: 2019/12/25   11:02
+ * Author： yuzq
+ * Description:
+ * Date: 2019/12/25   11:02
  */
 public class LeaveRequest {
 

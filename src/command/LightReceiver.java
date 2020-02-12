@@ -8,7 +8,7 @@ package command;
 public class LightReceiver {
 
     public void on(){
-        System.out.println("点灯打开了....");
+        System.out.println("电灯打开了....");
     }
 
     public void off(){
