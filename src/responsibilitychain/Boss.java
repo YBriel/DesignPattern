@@ -1,5 +1,8 @@
 package responsibilitychain;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @Author： yuzq
  * @Description:
@@ -31,5 +34,19 @@ public class Boss extends Leader {
             Thread.sleep(1000);
             System.out.println("跟财务对接下，明天滚蛋！");
         }
+    }
+
+    @Override
+    protected Map<String, String> doHandlerBack(LeaveRequest leaveRequest) {
+        Map<String,String> map=new HashMap<>();
+        System.out.println(this.name+"正在支付大于20元");
+        if(leaveRequest.getDays()>30){
+            map.put("reason","支付金额大于30元，支付失败！");
+             return map;
+        }
+        System.out.println(this.name+"第三步大于20块---钱包金额足够支付！");
+        map.put("reason","支付成功！");
+        return map;
+
     }
 }

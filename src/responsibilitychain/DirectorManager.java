@@ -1,5 +1,8 @@
 package responsibilitychain;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @Author： yuzq
  * @Description: 经理
@@ -28,5 +31,19 @@ public class DirectorManager extends Leader{
                 this.nextLeader.doHandler(leaveRequest);
             }
         }
+    }
+
+    @Override
+    protected Map<String,String> doHandlerBack(LeaveRequest leaveRequest) {
+        Map<String,String> map=new HashMap<>();
+        System.out.println(this.name+"第一步正在支付");
+        if(leaveRequest.getDays()>10){
+            System.out.println("支付金额大于10元，钱包金额不足以支付，将请求微信支付！");
+            map.put("reason","支付金额大于10元，钱包金额不足以支付，将请求微信支付！");
+            return this.nextLeader.doHandlerBack(leaveRequest);
+        }
+        System.out.println(this.name+"小于10元 钱包金额足够支付！");
+        map.put("reason","支付成功！");
+        return map;
     }
 }

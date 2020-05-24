@@ -1,5 +1,7 @@
 package responsibilitychain;
 
+import java.util.Map;
+
 /**
  * @Author： yuzq
  * @Description:
@@ -20,4 +22,6 @@ public abstract class Leader {
     }
 
     protected abstract void doHandler(LeaveRequest leaveRequest) throws InterruptedException;
+
+    protected abstract Map<String,String> doHandlerBack(LeaveRequest leaveRequest);
 }
